@@ -202,8 +202,17 @@ bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 #bindsym XF86MonBrightnessUp exec xbacklight +10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 #bindsym XF86MonBrightnessDown exec xbacklight -10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 # Backlight setting using dunst osc
+<<<<<<< HEAD
 bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+=======
+#bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
+#bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+bindsym $mod+F11 exec xrandr --output eDP-1 --brightness 0.8
+bindsym $mod+F12 exec xrandr --output eDP-1 --brightness 0.6
+
+
+>>>>>>> e939c12 (new dotfiles)
 
 # change focus
 bindsym $mod+h focus left
@@ -300,11 +309,19 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+<<<<<<< HEAD
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
+=======
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+>>>>>>> e939c12 (new dotfiles)
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"

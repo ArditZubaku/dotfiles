@@ -19,19 +19,11 @@ function get_mute {
     pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(yes|no)'
 }
 
-<<<<<<< HEAD
 # Uses regex to get brightness from xbacklight
-=======
-# Uses brightnessctl to get brightness
->>>>>>> e939c12 (new dotfiles)
 function get_brightness {
     brightnessctl | grep -Po '[0-9]{1,3}' | head -n 1
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e939c12 (new dotfiles)
 # Returns a mute icon, a volume-low icon, or a volume-high icon, depending on the volume
 function get_volume_icon {
     volume=$(get_volume)
@@ -98,14 +90,7 @@ brightness_up)
 
 brightness_down)
     # Decreases brightness and displays the notification
-<<<<<<< HEAD
     brightnessctl set $brightness_step-%
     show_brightness_notif
     ;;
-=======
-    brightnessctl set -$brightness_step%
-    show_brightness_notif
-    ;;
-
->>>>>>> e939c12 (new dotfiles)
 esac
